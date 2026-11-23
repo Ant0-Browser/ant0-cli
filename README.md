@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="Licence: BSD-3-Clause" src="https://img.shields.io/badge/licence-BSD--3--Clause-49d158?labelColor=131714"></a>
-  <a href="https://www.npmjs.com/package/ant0"><img alt="npm" src="https://img.shields.io/npm/v/ant0?color=49d158&labelColor=131714"></a>
+  <a href="https://www.npmjs.com/package/@ant0/cli"><img alt="npm" src="https://img.shields.io/npm/v/@ant0/cli?color=49d158&labelColor=131714"></a>
   <a href="https://docs.ant0.link/cli"><img alt="Docs" src="https://img.shields.io/badge/docs-docs.ant0.link-49d158?labelColor=131714"></a>
 </p>
 
@@ -31,7 +31,7 @@ The CLI doesn't start the app or sign in for you. `ant0 daemon start` starts the
 ## Install
 
 ```bash
-npm install --global ant0
+npm install --global @ant0/cli
 ant0 --version
 ```
 

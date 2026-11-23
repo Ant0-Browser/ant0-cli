@@ -1,5 +1,5 @@
 {
-  "name": "ant0",
+  "name": "@ant0/cli",
   "version": "0.3.22-beta.3",
   "description": "The Ant0 command line: profiles, proxies, browsers and more, over the local Ant0 API.",
   "license": "BSD-3-Clause",
