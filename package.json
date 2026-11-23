@@ -1,0 +1,65 @@
+{
+  "name": "ant0",
+  "version": "0.3.22-beta.3",
+  "description": "The Ant0 command line: profiles, proxies, browsers and more, over the local Ant0 API.",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "private": false,
+  "homepage": "https://ant0.link",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ant0-Browser/ant0-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ant0-Browser/ant0-cli/issues"
+  },
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=10"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "bin": {
+    "ant0": "./dist/bin.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.map",
+    "LICENSE",
+    "README.md",
+    "licenses"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json --noEmit",
+    "test": "vitest run",
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "generate:api": "node scripts/generate-api.mjs",
+    "generate:notices": "node scripts/generate-notices.mjs",
+    "check:forbidden": "node scripts/check-forbidden.mjs"
+  },
+  "dependencies": {
+    "@ant0/mcp": "0.3.22-beta.2",
+    "commander": "15.0.0",
+    "openapi-fetch": "0.17.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.4.0",
+    "@types/node": "^24.13.3",
+    "openapi-typescript": "^7.13.0",
+    "prettier": "3.9.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.12"
+  }
+}

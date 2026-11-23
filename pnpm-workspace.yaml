@@ -1,0 +1,2 @@
+minimumReleaseAgeExclude:
+  - "@ant0/mcp@0.3.22-beta.2"
